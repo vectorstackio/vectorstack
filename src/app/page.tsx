@@ -542,7 +542,7 @@ export default function Home() {
 
             <div className="mt-9">
               <a
-                href="mailto:YOUR_EMAIL_ADDRESS"
+                href={`mailto:${process.env.NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS}`}
                 className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
               >
                 Get in touch
