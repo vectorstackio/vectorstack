@@ -260,6 +260,11 @@ export default function Home() {
                 </Link>
               </li>
               <li>
+                <Link href="/about" className="transition-colors hover:text-blue-600">
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link
                   href="#contact"
                   className="rounded-full bg-slate-900 px-4 py-2 text-white transition-colors hover:bg-blue-600"
