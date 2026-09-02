@@ -3,6 +3,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
 export const metadata: Metadata = {
   title: {
     absolute: 'Contact | VectorStack',
@@ -134,63 +137,7 @@ export default function ContactPage() {
         Skip to main content
       </a>
 
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Link href="/" aria-label="Michael Garthwaite home">
-            <Logo />
-          </Link>
-
-          <nav aria-label="Main navigation">
-            <ul className="flex items-center gap-6 text-sm font-medium text-slate-600">
-              <li>
-                <Link
-                  href="/#work"
-                  className="transition-colors hover:text-blue-600"
-                >
-                  Work
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/projects"
-                  className="transition-colors hover:text-blue-600"
-                >
-                  Projects
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/services"
-                  className="transition-colors hover:text-blue-600"
-                >
-                  Services
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/about"
-                  className="transition-colors hover:text-blue-600"
-                >
-                  About
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/contact"
-                  aria-current="page"
-                  className="rounded-full bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main id="main-content">
         {/* Hero */}
@@ -348,17 +295,7 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <footer className="bg-slate-950 text-slate-400">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <div>
-            <span className="text-white">Michael Garthwaite</span>
-            <span className="mx-2">·</span>
-            VectorStack Limited
-          </div>
-
-          <div>© {new Date().getFullYear()} VectorStack Limited</div>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }
