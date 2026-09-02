@@ -245,6 +245,22 @@ export default function Home() {
               </li>
               <li>
                 <Link
+                  href="/projects"
+                  className="transition-colors hover:text-blue-600"
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="transition-colors hover:text-blue-600"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="#contact"
                   className="rounded-full bg-slate-900 px-4 py-2 text-white transition-colors hover:bg-blue-600"
                 >
