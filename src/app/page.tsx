@@ -3,9 +3,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 export const metadata: Metadata = {
   title: 'Senior Full-Stack Developer & Technical Lead | Michael Garthwaite',
   description:
@@ -130,89 +127,6 @@ const reasons = [
   },
 ]
 
-function Logo() {
-  return (
-    <div className="flex items-center gap-3" aria-label="VectorStack Limited">
-      <svg
-        aria-hidden="true"
-        className="h-10 w-10 shrink-0"
-        viewBox="0 0 90 90"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Top row */}
-        <rect
-          x="4"
-          y="4"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-
-        {/* Middle row */}
-        <rect
-          x="4"
-          y="33"
-          width="24"
-          height="24"
-          fill="white"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="33"
-          y="33"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-
-        {/* Bottom row */}
-        <rect
-          x="4"
-          y="62"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="33"
-          y="62"
-          width="24"
-          height="24"
-          fill="white"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="62"
-          y="62"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-      </svg>
-
-      <div className="leading-none">
-        <div className="text-xl font-bold tracking-tight text-slate-900">
-          Vector<span className="text-blue-600">Stack</span>
-        </div>
-        <div className="mt-1 text-[0.55rem] font-medium tracking-[0.35em] text-slate-500">
-          LIMITED
-        </div>
-      </div>
-    </div>
-  )
-}
-
 export default function Home() {
   return (
     <>
@@ -229,8 +143,6 @@ export default function Home() {
       >
         Skip to main content
       </a>
-
-      <Header />
 
       <main id="main-content">
         {/* Hero */}
@@ -518,8 +430,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   )
 }

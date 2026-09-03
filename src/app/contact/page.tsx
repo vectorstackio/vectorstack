@@ -3,9 +3,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 export const metadata: Metadata = {
   title: {
     absolute: 'Contact | VectorStack',
@@ -136,8 +133,6 @@ export default function ContactPage() {
       >
         Skip to main content
       </a>
-
-      <Header />
 
       <main id="main-content">
         {/* Hero */}
@@ -295,7 +290,6 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <Footer />
     </>
   )
 }

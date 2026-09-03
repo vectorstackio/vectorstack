@@ -1,6 +1,10 @@
 // app/layout.tsx
 
 import type { Metadata } from 'next'
+
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
 import './globals.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
@@ -80,7 +84,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

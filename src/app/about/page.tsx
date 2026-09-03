@@ -3,9 +3,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 export const metadata: Metadata = {
   title: {
     absolute: 'About | VectorStack',
@@ -150,8 +147,6 @@ export default function AboutPage() {
       >
         Skip to main content
       </a>
-
-      <Header />
 
       <main id="main-content">
         {/* Hero */}
@@ -405,7 +400,6 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <Footer />
     </>
   )
 }
