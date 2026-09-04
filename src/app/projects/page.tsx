@@ -1,20 +1,35 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+
 export const metadata: Metadata = {
   title: {
-    absolute: 'Projects | VectorStack',
+    absolute:
+      'Software Development Projects | Next.js, AWS & AI | VectorStack',
   },
   description:
-    'Selected software development projects covering full-stack development, AWS, AI, integrations and technical leadership.',
+    'Software development projects by VectorStack covering Next.js, Node.js, AWS, AI, cloud infrastructure, Salesforce integrations and technical architecture.',
   alternates: {
     canonical: '/projects',
   },
   openGraph: {
-    title: 'Projects | VectorStack',
+    title:
+      'Software Development Projects | Next.js, AWS & AI | VectorStack',
     description:
-      'Selected software development projects covering full-stack development, AWS, AI, integrations and technical leadership.',
+      'Selected full-stack, cloud and AI software projects covering Next.js, Node.js, AWS, integrations and technical architecture.',
     type: 'website',
+    url: `${siteUrl}/projects`,
+    siteName: 'VectorStack',
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'VectorStack software development projects',
+      },
+    ],
   },
 }
 
@@ -97,35 +112,6 @@ const projects = [
       'Worked on the Travelodge website as part of my work with Sense Internet, contributing to a production web platform for a major UK hotel brand.',
   },
 ]
-
-function Logo() {
-  return (
-    <div className="flex items-center gap-3" aria-label="VectorStack Limited">
-      <svg
-        aria-hidden="true"
-        className="h-10 w-10 shrink-0"
-        viewBox="0 0 90 90"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect x="4" y="4" width="24" height="24" fill="#2563EB" stroke="#111827" strokeWidth="3" />
-        <rect x="4" y="33" width="24" height="24" fill="white" stroke="#111827" strokeWidth="3" />
-        <rect x="33" y="33" width="24" height="24" fill="#2563EB" stroke="#111827" strokeWidth="3" />
-        <rect x="4" y="62" width="24" height="24" fill="#2563EB" stroke="#111827" strokeWidth="3" />
-        <rect x="33" y="62" width="24" height="24" fill="white" stroke="#111827" strokeWidth="3" />
-        <rect x="62" y="62" width="24" height="24" fill="#2563EB" stroke="#111827" strokeWidth="3" />
-      </svg>
-      <div className="leading-none">
-        <div className="text-xl font-bold tracking-tight text-slate-900">
-          Vector<span className="text-blue-600">Stack</span>
-        </div>
-        <div className="mt-1 text-[0.55rem] font-medium tracking-[0.35em] text-slate-500">
-          LIMITED
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function ProjectsPage() {
   return (
@@ -258,7 +244,7 @@ export default function ProjectsPage() {
             </p>
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
               >
                 Get in touch
