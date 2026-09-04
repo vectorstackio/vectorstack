@@ -3,47 +3,86 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+
 export const metadata: Metadata = {
-  title: 'Senior Full-Stack Developer & Technical Lead | Michael Garthwaite',
+  title: 'Senior Full-Stack Developer | Node.js, React, Next.js & AWS | Michael Garthwaite',
   description:
-    'Michael Garthwaite is a senior full-stack developer and technical lead specialising in Node.js, React, Next.js, AWS, AI, integrations and automation.',
+    'Senior full-stack developer and technical lead specialising in Node.js, React, Next.js and AWS. Bespoke web applications, integrations, automation and AI solutions for businesses.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Senior Full-Stack Developer & Technical Lead | Michael Garthwaite',
+    title: 'Senior Full-Stack Developer | Node.js, React, Next.js & AWS',
     description:
       'Senior full-stack development, cloud systems, integrations, automation and AI-powered applications.',
     type: 'website',
+    url: siteUrl,
+    siteName: 'Michael Garthwaite',
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Michael Garthwaite — Senior Full-Stack Developer & Technical Lead',
+      },
+    ],
   },
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-
-const personSchema = {
+const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Michael Garthwaite',
-  jobTitle: 'Senior Full-Stack Developer & Technical Lead',
-  url: siteUrl,
-  worksFor: {
-    '@type': 'Organization',
-    name: 'VectorStack Limited',
-  },
-  knowsAbout: [
-    'Node.js',
-    'React',
-    'Next.js',
-    'TypeScript',
-    'JavaScript',
-    'AWS',
-    'Cloud Computing',
-    'Software Architecture',
-    'Artificial Intelligence',
-    'AI Applications',
-    'API Integration',
-    'Salesforce Integration',
-    'Automation',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: 'Michael Garthwaite',
+      givenName: 'Michael',
+      familyName: 'Garthwaite',
+      alternateName: 'Mike Garthwaite',
+      email: 'mike@vectorstack.io',
+      url: siteUrl,
+      jobTitle: 'Senior Full-Stack Developer & Technical Lead',
+      sameAs: [
+        'https://www.linkedin.com/in/mike-garthwaite-0747ba14',
+      ],
+      worksFor: {
+        '@id': `${siteUrl}/#organization`,
+      },
+      knowsAbout: [
+        'Node.js',
+        'React',
+        'Next.js',
+        'TypeScript',
+        'JavaScript',
+        'AWS',
+        'Cloud Computing',
+        'Software Architecture',
+        'Artificial Intelligence',
+        'AI Applications',
+        'API Integration',
+        'Salesforce Integration',
+        'Automation',
+      ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'VectorStack Limited',
+      url: siteUrl,
+      founder: {
+        '@id': `${siteUrl}/#person`,
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: 'Michael Garthwaite',
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+    },
   ],
 }
 
@@ -133,7 +172,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
+          __html: JSON.stringify(structuredData),
         }}
       />
 
@@ -210,10 +249,8 @@ export default function Home() {
                 </p>
 
                 <p>
-                  I specialise in Node.js, React, Next.js and AWS, with
-                  particular experience in application architecture,
-                  third-party integrations, automation and AI-powered
-                  applications.
+                  I specialise in Node.js, React, Next.js, TypeScript and AWS, with particular experience 
+                  in application architecture, third-party integrations, automation and AI-powered applications.
                 </p>
 
                 <p>
