@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+const email = process.env.NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS ?? ''
 
 export const metadata: Metadata = {
   title: {
@@ -116,14 +117,7 @@ const stages = [
 export default function ServicesPage() {
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white"
-      >
-        Skip to main content
-      </a>
-
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
             <div className="max-w-4xl">
@@ -158,9 +152,9 @@ export default function ServicesPage() {
         <section className="bg-slate-50">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                 How I can help
-              </p>
+              </h2>
               <p className="mt-5 text-lg leading-8 text-slate-600 sm:text-xl">
                 Whether you need a new application, help modernising an existing platform, or specialist expertise for a complex integration, I can help turn the requirement into a robust production solution.
               </p>
@@ -172,7 +166,7 @@ export default function ServicesPage() {
                   key={service.title}
                   className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-[border-color,box-shadow] hover:border-slate-300 hover:shadow-md"
                 >
-                  <h2 className="text-xl font-semibold text-slate-950">{service.title}</h2>
+                  <h3 className="text-xl font-semibold text-slate-950">{service.title}</h3>
                   <p className="mt-4 leading-7 text-slate-600">{service.description}</p>
                   <ul className="mt-6 flex flex-wrap gap-2" aria-label={`${service.title} technologies`}>
                     {service.technologies.map((technology) => (
@@ -240,15 +234,21 @@ export default function ServicesPage() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-50">
               If you need an experienced developer to build something new, solve a difficult technical problem or help take an existing platform forward, I&apos;d be happy to have a conversation.
             </p>
-            <div className="mt-9">
-              <a
-                href={`mailto:${process.env.NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS}`}
-                className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
-              >
-                Get in touch
-                <span aria-hidden="true" className="ml-2">→</span>
-              </a>
-            </div>
+            {email ? (
+              <div className="mt-9">
+                <a
+                  href={`mailto:${email}`}
+                  className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
+                >
+                  Get in touch
+                  <span aria-hidden="true" className="ml-2">→</span>
+                </a>
+              </div>
+            ) : (
+              <p className="mt-9 text-sm text-blue-50">
+                Email contact is currently unavailable.
+              </p>
+            )}
           </div>
         </section>
       </main>

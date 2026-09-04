@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+const email = process.env.NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS ?? ''
 
 export const metadata: Metadata = {
   title: 'Senior Full-Stack Developer | Node.js, React, Next.js & AWS | Michael Garthwaite',
@@ -176,14 +177,7 @@ export default function Home() {
         }}
       />
 
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white"
-      >
-        Skip to main content
-      </a>
-
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         {/* Hero */}
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
@@ -449,19 +443,25 @@ export default function Home() {
               what you&apos;re trying to achieve.
             </p>
 
-            <div className="mt-9">
-              <a
-                href={`mailto:${process.env.NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS}`}
-                className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
-              >
-                Get in touch
-                <span aria-hidden="true" className="ml-2">
-                  →
-                </span>
-              </a>
-            </div>
+            {email ? (
+              <div className="mt-9">
+                <a
+                  href={`mailto:${email}`}
+                  className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
+                >
+                  Get in touch
+                  <span aria-hidden="true" className="ml-2">
+                    →
+                  </span>
+                </a>
+              </div>
+            ) : (
+              <p className="mt-9 text-sm text-blue-50">
+                Email contact is currently unavailable.
+              </p>
+            )}
 
-            <p className="mt-7 text-sm text-blue-100">
+            <p className="mt-7 text-sm text-blue-50">
               Available for freelance projects from November 2026.
             </p>
           </div>

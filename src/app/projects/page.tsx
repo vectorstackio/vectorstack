@@ -116,14 +116,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white"
-      >
-        Skip to main content
-      </a>
-
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
             <div className="max-w-4xl">
@@ -208,9 +201,9 @@ export default function ProjectsPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                 More experience
-              </p>
+              </h2>
               <p className="mt-5 text-lg leading-8 text-slate-600 sm:text-xl">
                 Alongside these projects, I&apos;ve worked across a range of organisations and platforms, including Ecorys, UCL and Tastecard. My experience spans greenfield development, platform modernisation, integrations and production web applications.
               </p>

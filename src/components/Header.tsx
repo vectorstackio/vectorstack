@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Logo() {
   return (
-    <div className="flex items-center gap-3" aria-label="VectorStack Limited">
+    <div className="flex items-center gap-3">
       <svg
         aria-hidden="true"
         className="h-10 w-10 shrink-0"
@@ -84,17 +84,18 @@ function Logo() {
 export default function Header() {
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" aria-label="Michael Garthwaite home">
+      <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <Link href="/">
           <Logo />
+          <span className="sr-only"> home</span>
         </Link>
 
-        <nav aria-label="Main navigation">
-          <ul className="flex items-center gap-6 text-sm font-medium text-slate-600">
+        <nav aria-label="Main navigation" className="w-full sm:w-auto">
+          <ul className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-slate-600 sm:justify-end">
             <li>
               <Link
                 href="/#work"
-                className="transition-colors hover:text-blue-600"
+                className="inline-flex min-h-10 items-center px-2 transition-colors hover:text-blue-600"
               >
                 Work
               </Link>
@@ -102,7 +103,7 @@ export default function Header() {
             <li>
               <Link
                 href="/projects"
-                className="transition-colors hover:text-blue-600"
+                className="inline-flex min-h-10 items-center px-2 transition-colors hover:text-blue-600"
               >
                 Projects
               </Link>
@@ -110,18 +111,18 @@ export default function Header() {
             <li>
               <Link
                 href="/services"
-                className="transition-colors hover:text-blue-600"
+                className="inline-flex min-h-10 items-center px-2 transition-colors hover:text-blue-600"
               >
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/about" className="transition-colors hover:text-blue-600">
+              <Link href="/about" className="inline-flex min-h-10 items-center px-2 transition-colors hover:text-blue-600">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="transition-colors hover:text-blue-600">
+              <Link href="/contact" className="inline-flex min-h-10 items-center px-2 transition-colors hover:text-blue-600">
                 Contact
               </Link>
             </li>

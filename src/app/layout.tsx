@@ -85,6 +85,12 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white"
+        >
+          Skip to main content
+        </a>
         <Header />
         {children}
         <Footer />

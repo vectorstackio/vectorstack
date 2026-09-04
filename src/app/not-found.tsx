@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <main className="bg-white">
+    <main id="main-content" tabIndex={-1} className="bg-white">
       <section className="border-b border-slate-200">
         <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center px-6 py-24 lg:px-8">
           <div className="max-w-3xl">

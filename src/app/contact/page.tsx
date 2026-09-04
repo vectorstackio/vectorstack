@@ -60,7 +60,7 @@ const services = [
 
 function Logo() {
   return (
-    <div className="flex items-center gap-3" aria-label="VectorStack Limited">
+    <div className="flex items-center gap-3">
       <svg
         aria-hidden="true"
         className="h-10 w-10 shrink-0"
@@ -140,14 +140,7 @@ function Logo() {
 export default function ContactPage() {
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white"
-      >
-        Skip to main content
-      </a>
-
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         {/* Hero */}
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
