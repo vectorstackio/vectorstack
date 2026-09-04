@@ -1,0 +1,31 @@
+1. Homepage metadata ← we're here 
+2. Structured data 
+3. robots.ts 
+4. sitemap.ts 
+5. Open Graph / social sharing image 
+6. Favicon / icons 
+7. About page SEO 
+8. Services page SEO 
+9. Work/projects SEO 
+10. Contact page SEO 
+11. 404 page 
+12. Performance / Core Web Vitals 
+13. Accessibility 
+14. Google Search Console 
+15. Submit sitemap and monitor indexing
+
+
+That's fine from a user perspective, but Google will understand your business considerably better if we eventually create dedicated pages such as:
+
+/
+ /about
+ /services
+ /services/web-development
+ /services/aws-cloud-development
+ /services/integrations-automation
+ /services/ai-development
+ /work
+ /contact
+
+
+ Pages → Shared layout → SEO → favicon → 404 → mobile → accessibility → production deployment → test → Google Search Console
