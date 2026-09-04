@@ -1,22 +1,35 @@
 // app/contact/page.tsx
 
 import type { Metadata } from 'next'
-import Link from 'next/link'
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Contact | VectorStack',
+    absolute: 'Contact VectorStack | Freelance Software Developer & Technical Lead',
   },
   description:
-    'Get in touch with VectorStack about freelance development, technical leadership, AWS, AI, integrations and automation projects.',
+    'Contact VectorStack about freelance software development, Node.js, React, Next.js, AWS, AI applications, integrations, automation and technical leadership.',
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'Contact | VectorStack',
+    title:
+      'Contact VectorStack | Freelance Software Developer & Technical Lead',
     description:
-      'Get in touch with VectorStack about freelance development, technical leadership, AWS, AI, integrations and automation projects.',
+      'Get in touch about freelance software development, AWS, AI, integrations, automation and technical leadership.',
     type: 'website',
+    url: `${siteUrl}/contact`,
+    siteName: 'VectorStack',
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Contact VectorStack for software development and technical leadership',
+      },
+    ],
   },
 }
 
@@ -231,7 +244,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <p className="mt-10 text-sm text-slate-500">
-                  Please configure NEXT_PUBLIC_CONTACT_EMAIL in your
+                  Please configure NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS in your
                   environment.
                 </p>
               )}
