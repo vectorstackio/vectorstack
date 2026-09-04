@@ -3,20 +3,34 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+
 export const metadata: Metadata = {
   title: {
-    absolute: 'About | VectorStack',
+    absolute: 'About Michael Garthwaite | Senior Full-Stack Developer & Technical Lead',
   },
   description:
-    'Senior full-stack developer and technical lead specialising in Node.js, React, Next.js, AWS, AI, integrations and automation.',
+    'About Michael Garthwaite, a senior full-stack developer and technical lead specialising in Node.js, React, Next.js, TypeScript, AWS, AI, integrations and automation.',
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: 'About | VectorStack',
+    title:
+      'About Michael Garthwaite | Senior Full-Stack Developer & Technical Lead',
     description:
-      'Senior full-stack developer and technical lead specialising in Node.js, React, Next.js, AWS, AI, integrations and automation.',
-    type: 'website',
+      'Senior full-stack developer and technical lead specialising in Node.js, React, Next.js, TypeScript, AWS, AI, integrations and automation.',
+    type: 'profile',
+    url: `${siteUrl}/about`,
+    siteName: 'Michael Garthwaite',
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Michael Garthwaite — Senior Full-Stack Developer & Technical Lead',
+      },
+    ],
   },
 }
 
@@ -58,85 +72,6 @@ const expectations = [
       'I’ll build with the future in mind, so the system can evolve as your business grows.',
   },
 ]
-
-function Logo() {
-  return (
-    <div className="flex items-center gap-3" aria-label="VectorStack Limited">
-      <svg
-        aria-hidden="true"
-        className="h-10 w-10 shrink-0"
-        viewBox="0 0 90 90"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="4"
-          y="4"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="4"
-          y="33"
-          width="24"
-          height="24"
-          fill="white"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="33"
-          y="33"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="4"
-          y="62"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="33"
-          y="62"
-          width="24"
-          height="24"
-          fill="white"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-        <rect
-          x="62"
-          y="62"
-          width="24"
-          height="24"
-          fill="#2563EB"
-          stroke="#111827"
-          strokeWidth="3"
-        />
-      </svg>
-
-      <div className="leading-none">
-        <div className="text-xl font-bold tracking-tight text-slate-900">
-          Vector<span className="text-blue-600">Stack</span>
-        </div>
-
-        <div className="mt-1 text-[0.55rem] font-medium tracking-[0.35em] text-slate-500">
-          LIMITED
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function AboutPage() {
   return (
@@ -180,7 +115,7 @@ export default function AboutPage() {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
                 >
                   Let&apos;s talk
@@ -379,7 +314,7 @@ export default function AboutPage() {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
                 >
                   Get in touch
