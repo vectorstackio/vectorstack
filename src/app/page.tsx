@@ -180,7 +180,7 @@ export default function Home() {
       <main id="main-content" tabIndex={-1}>
         {/* Hero */}
         <section className="border-b border-slate-200 bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-32 lg:px-8 lg:py-32">
             <div className="max-w-4xl">
               <h1 className="text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
                 Senior Full-Stack Developer & Technical Lead

@@ -119,7 +119,7 @@ export default function ServicesPage() {
     <>
       <main id="main-content" tabIndex={-1}>
         <section className="border-b border-slate-200 bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 lg:py-32">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                 Services

@@ -84,10 +84,9 @@ function Logo() {
 export default function Header() {
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col items-start gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-        <Link href="/">
+      <div className="mx-auto flex max-w-7xl flex-col items-start gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:px-8">
+        <Link href="/" aria-label="VectorStack Limited home">
           <Logo />
-          <span className="sr-only"> home</span>
         </Link>
 
         <nav aria-label="Main navigation" className="w-full sm:w-auto">
