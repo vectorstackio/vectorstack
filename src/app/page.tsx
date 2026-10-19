@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       'Senior full-stack development, cloud systems, integrations, automation and AI-powered applications.',
     type: 'website',
     url: siteUrl,
-    siteName: 'Michael Garthwaite',
+    siteName: 'ReasonStack',
     images: [
       {
         url: `${siteUrl}/og-image.png`,
@@ -69,7 +69,8 @@ const structuredData = {
     {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
-      name: 'VectorStack Limited',
+      name: 'ReasonStack',
+      legalName: 'ReasonStack Limited',
       url: siteUrl,
       founder: {
         '@id': `${siteUrl}/#person`,
@@ -79,7 +80,7 @@ const structuredData = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
-      name: 'Michael Garthwaite',
+      name: 'ReasonStack',
       publisher: {
         '@id': `${siteUrl}/#organization`,
       },
@@ -216,7 +217,7 @@ export default function Home() {
               </div>
 
               <p className="mt-8 text-sm text-slate-500">
-                Michael Garthwaite · VectorStack Limited · West Yorkshire, UK
+                Michael Garthwaite · ReasonStack Limited · West Yorkshire, UK
               </p>
             </div>
           </div>

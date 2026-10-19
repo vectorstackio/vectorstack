@@ -9,27 +9,27 @@ const email = process.env.NEXT_PUBLIC_DEFAULT_EMAIL_ADDRESS ?? ''
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Software Development Services | Node.js, React, AWS & AI | VectorStack',
+    absolute: 'Software Development Services | Node.js, React, AWS & AI | ReasonStack',
   },
   description:
-    'Software development services from VectorStack, including Node.js, React, Next.js, AWS cloud development, AI applications, integrations, automation and technical leadership.',
+    'Software development services from ReasonStack, including Node.js, React, Next.js, AWS cloud development, AI applications, integrations, automation and technical leadership.',
   alternates: {
     canonical: '/services',
   },
   openGraph: {
     title:
-      'Software Development Services | Node.js, React, AWS & AI | VectorStack',
+      'Software Development Services | Node.js, React, AWS & AI | ReasonStack',
     description:
       'Full-stack development, AWS cloud solutions, AI applications, integrations, automation and technical leadership.',
     type: 'website',
     url: `${siteUrl}/services`,
-    siteName: 'VectorStack',
+    siteName: 'ReasonStack',
     images: [
       {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'VectorStack software development services',
+        alt: 'ReasonStack software development services',
       },
     ],
   },

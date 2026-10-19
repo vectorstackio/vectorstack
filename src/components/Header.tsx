@@ -70,7 +70,7 @@ function Logo() {
 
       <div className="leading-none">
         <div className="text-xl font-bold tracking-tight text-slate-900">
-          Vector<span className="text-blue-600">Stack</span>
+          Reason<span className="text-blue-600">Stack</span>
         </div>
 
         <div className="mt-1 text-[0.55rem] font-medium tracking-[0.35em] text-slate-500">
@@ -85,7 +85,7 @@ export default function Header() {
   return (
     <header className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:px-8">
-        <Link href="/" aria-label="VectorStack Limited home">
+        <Link href="/" aria-label="ReasonStack Limited home">
           <Logo />
         </Link>
 

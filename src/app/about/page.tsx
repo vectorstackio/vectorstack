@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Senior full-stack developer and technical lead specialising in Node.js, React, Next.js, TypeScript, AWS, AI, integrations and automation.',
     type: 'profile',
     url: `${siteUrl}/about`,
-    siteName: 'Michael Garthwaite',
+    siteName: 'ReasonStack',
     images: [
       {
         url: `${siteUrl}/og-image.png`,

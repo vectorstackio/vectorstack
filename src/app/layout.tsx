@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   title: {
     default:
       'Michael Garthwaite | Senior Full-Stack Developer & Technical Lead',
-    template: '%s | Michael Garthwaite',
+    template: '%s | ReasonStack',
   },
 
   description:
     'Michael Garthwaite is a senior full-stack developer and technical lead specialising in Node.js, React, Next.js, AWS, AI, integrations and automation.',
 
-  applicationName: 'Michael Garthwaite',
+  applicationName: 'ReasonStack',
 
   authors: [
     {
@@ -60,12 +60,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    siteName: 'Michael Garthwaite',
+    siteName: 'ReasonStack',
     title:
       'Michael Garthwaite | Senior Full-Stack Developer & Technical Lead',
     description:
       'Senior full-stack development, cloud systems, integrations, automation and AI-powered applications.',
     url: siteUrl,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Michael Garthwaite - Senior Full-Stack Developer & Technical Lead',
+      },
+    ],
   },
 
   twitter: {
@@ -74,6 +82,7 @@ export const metadata: Metadata = {
       'Michael Garthwaite | Senior Full-Stack Developer & Technical Lead',
     description:
       'Senior full-stack development, cloud systems, integrations, automation and AI-powered applications.',
+    images: ['/og-image.png'],
   },
 }
 

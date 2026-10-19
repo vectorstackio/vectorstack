@@ -7,27 +7,27 @@ const siteUrl =
 export const metadata: Metadata = {
   title: {
     absolute:
-      'Software Development Projects | Next.js, AWS & AI | VectorStack',
+      'Software Development Projects | Next.js, AWS & AI | ReasonStack',
   },
   description:
-    'Software development projects by VectorStack covering Next.js, Node.js, AWS, AI, cloud infrastructure, Salesforce integrations and technical architecture.',
+    'Software development projects by ReasonStack covering Next.js, Node.js, AWS, AI, cloud infrastructure, Salesforce integrations and technical architecture.',
   alternates: {
     canonical: '/projects',
   },
   openGraph: {
     title:
-      'Software Development Projects | Next.js, AWS & AI | VectorStack',
+      'Software Development Projects | Next.js, AWS & AI | ReasonStack',
     description:
       'Selected full-stack, cloud and AI software projects covering Next.js, Node.js, AWS, integrations and technical architecture.',
     type: 'website',
     url: `${siteUrl}/projects`,
-    siteName: 'VectorStack',
+    siteName: 'ReasonStack',
     images: [
       {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'VectorStack software development projects',
+        alt: 'ReasonStack software development projects',
       },
     ],
   },

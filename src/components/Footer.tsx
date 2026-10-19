@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-slate-950 text-slate-400">
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm sm:flex-row sm:items-center sm:justify-between">
         <p>
-          Michael Garthwaite · VectorStack Limited
+          Michael Garthwaite · ReasonStack Limited
         </p>
 
         <p>

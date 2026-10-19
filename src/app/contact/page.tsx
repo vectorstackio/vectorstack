@@ -7,27 +7,27 @@ const siteUrl =
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Contact VectorStack | Freelance Software Developer & Technical Lead',
+    absolute: 'Contact ReasonStack | Freelance Software Developer & Technical Lead',
   },
   description:
-    'Contact VectorStack about freelance software development, Node.js, React, Next.js, AWS, AI applications, integrations, automation and technical leadership.',
+    'Contact ReasonStack about freelance software development, Node.js, React, Next.js, AWS, AI applications, integrations, automation and technical leadership.',
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
     title:
-      'Contact VectorStack | Freelance Software Developer & Technical Lead',
+      'Contact ReasonStack | Freelance Software Developer & Technical Lead',
     description:
       'Get in touch about freelance software development, AWS, AI, integrations, automation and technical leadership.',
     type: 'website',
     url: `${siteUrl}/contact`,
-    siteName: 'VectorStack',
+    siteName: 'ReasonStack',
     images: [
       {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Contact VectorStack for software development and technical leadership',
+        alt: 'Contact ReasonStack for software development and technical leadership',
       },
     ],
   },
@@ -126,7 +126,7 @@ function Logo() {
 
       <div className="leading-none">
         <div className="text-xl font-bold tracking-tight text-slate-900">
-          Vector<span className="text-blue-600">Stack</span>
+          Reason<span className="text-blue-600">Stack</span>
         </div>
 
         <div className="mt-1 text-[0.55rem] font-medium tracking-[0.35em] text-slate-500">
