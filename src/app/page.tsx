@@ -41,7 +41,7 @@ const structuredData = {
       givenName: 'Michael',
       familyName: 'Garthwaite',
       alternateName: 'Mike Garthwaite',
-      email: 'mike@vectorstack.io',
+      email: 'michaelgarthwaite@gmail.com',
       url: siteUrl,
       jobTitle: 'Senior Full-Stack Developer & Technical Lead',
       sameAs: [
