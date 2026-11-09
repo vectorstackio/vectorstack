@@ -2,41 +2,65 @@
 
 import type { MetadataRoute } from 'next'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+).replace(/\/+$/, '')
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${siteUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+  const routes = [
+    { path: '/', priority: 1 },
+    { path: '/services/', priority: 0.9 },
+    { path: '/projects/', priority: 0.9 },
+    { path: '/about/', priority: 0.9 },
+    { path: '/contact/', priority: 0.9 },
   ]
+
+  return routes.map(({ path, priority }) => ({
+    url: `${siteUrl}${path}`,
+    changeFrequency: 'monthly' as const,
+    priority,
+  }))
 }
+
+// import type { MetadataRoute } from 'next'
+
+// const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+
+// export const dynamic = 'force-static'
+
+// export default function sitemap(): MetadataRoute.Sitemap {
+//   return [
+//     {
+//       url: siteUrl,
+//       lastModified: new Date(),
+//       changeFrequency: 'monthly',
+//       priority: 1,
+//     },
+//     {
+//       url: `${siteUrl}/services`,
+//       lastModified: new Date(),
+//       changeFrequency: 'monthly',
+//       priority: 0.9,
+//     },
+//     {
+//       url: `${siteUrl}/projects`,
+//       lastModified: new Date(),
+//       changeFrequency: 'monthly',
+//       priority: 0.9,
+//     },
+//     {
+//       url: `${siteUrl}/about`,
+//       lastModified: new Date(),
+//       changeFrequency: 'monthly',
+//       priority: 0.9,
+//     },
+//     {
+//       url: `${siteUrl}/contact`,
+//       lastModified: new Date(),
+//       changeFrequency: 'monthly',
+//       priority: 0.9,
+//     },
+//   ]
+// }
